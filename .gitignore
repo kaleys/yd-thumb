@@ -2,3 +2,4 @@
 /src/*
 package.json
 package-local.json
+gulpfile.js
