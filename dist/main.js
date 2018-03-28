@@ -95,8 +95,9 @@ var PraiseButton = function () {
         key: 'checkButton',
         value: function checkButton(btnEl) {
             return function (scope) {
-                scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn');
-                //scope.btn.innerHTML = '点赞';
+                scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn', function (el) {
+                    el.innerHTML = "点赞";
+                });
                 return scope;
             };
         }
@@ -122,7 +123,7 @@ var PraiseButton = function () {
         }
     }], [{
         key: 'checkEl',
-        value: function checkEl(parent, selector, className) {
+        value: function checkEl(parent, selector, className, beforeCreateCb) {
             if (selector instanceof Element) return selector;
             var el = void 0;
             if (typeof selector == 'string') {
@@ -131,6 +132,7 @@ var PraiseButton = function () {
             if (!el) {
                 el = document.createElement('div');
                 el.className = className;
+                beforeCreateCb && beforeCreateCb(el);
                 parent.appendChild(el);
             }
             return el;
@@ -148,7 +150,22 @@ var Thumb = function (_PraiseButton) {
 
         _classCallCheck(this, Thumb);
 
-        return _possibleConstructorReturn(this, (Thumb.__proto__ || Object.getPrototypeOf(Thumb)).call(this, el, options));
+        var _this2 = _possibleConstructorReturn(this, (Thumb.__proto__ || Object.getPrototypeOf(Thumb)).call(this, el, options));
+
+        var clsName = _this2.container.className;
+        if (clsName.indexOf('praise-thumb') === -1) {
+            _this2.container.clsName = clsName.split(' ').push('praise-thumb').join(' ');
+        }
+
+        var titleWrapper = document.createElement('div');
+        titleWrapper.className = 'praise-title';
+        titleWrapper.innerHTML = '<span class="praise-title__label">点赞数：</span>';
+        titleWrapper.appendChild(_this2.showEl);
+        _this2.container.appendChild(titleWrapper);
+
+        _this2.btn.className += ' thumb';
+        _this2.btn.innerHTML = '<div class="thumb-connect"></div>\n            <div class="thumb-thumb"></div>\n            <div class="thumb-finger-first"></div>\n            <div class="thumb-fingter-sec"></div>\n            <div class="thumb-wrist"></div>';
+        return _this2;
     }
 
     _createClass(Thumb, [{
@@ -161,3 +178,5 @@ var Thumb = function (_PraiseButton) {
 
     return Thumb;
 }(PraiseButton);
+
+/* export default Thumb; */
