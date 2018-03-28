@@ -65,8 +65,9 @@ class PraiseButton {
 
     checkButton(btnEl) {
         return (scope) => {
-            scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn');
-            //scope.btn.innerHTML = '点赞';
+            scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn', (el)=>{
+                el.innerHTML = "点赞"
+            });
             return scope;
         }
     }
@@ -87,7 +88,7 @@ class PraiseButton {
         }
     }
 
-    static checkEl(parent, selector, className) {
+    static checkEl(parent, selector, className, beforeCreateCb) {
         if (selector instanceof Element) return selector;
         let el;
         if (typeof selector == 'string') {
@@ -96,6 +97,7 @@ class PraiseButton {
         if (!el) {
             el = document.createElement('div');
             el.className = className;
+            beforeCreateCb && beforeCreateCb(el);
             parent.appendChild(el);
         }
         return el;
@@ -105,6 +107,24 @@ class PraiseButton {
 class Thumb extends PraiseButton {
     constructor(el, options = {}) {
         super(el, options);
+        
+        let clsName = this.container.className;
+        if (clsName.indexOf('praise-thumb') === -1) {
+            this.container.clsName = clsName.split(' ').push('praise-thumb').join(' ');
+        }
+
+        let titleWrapper = document.createElement('div');
+        titleWrapper.className = 'praise-title';
+        titleWrapper.innerHTML = '<span class="praise-title__label">点赞数：</span>';
+        titleWrapper.appendChild(this.showEl);
+        this.container.appendChild(titleWrapper);
+        
+        this.btn.className +=' thumb';
+        this.btn.innerHTML = `<div class="thumb-connect"></div>
+            <div class="thumb-thumb"></div>
+            <div class="thumb-finger-first"></div>
+            <div class="thumb-fingter-sec"></div>
+            <div class="thumb-wrist"></div>`;
     }
 
     praise(e){
@@ -113,3 +133,6 @@ class Thumb extends PraiseButton {
     }
 
 }
+
+/* export default Thumb; */
+

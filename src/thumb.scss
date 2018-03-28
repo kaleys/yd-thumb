@@ -140,20 +140,22 @@ $c-border: #74919f;
     }
 }
 
-.praise {
+.praise-thumb {
     width: 400px;
     margin: 0 auto;
     text-align: center;
+
+    .praise-title {
+        padding: 10px;
+
+    }
+
+    .praise-btn {
+        cursor: pointer;
+    }
 }
 
-.praise-title {
-    padding: 10px;
 
-}
-
-.praise-btn {
-    cursor: pointer;
-}
 
 .praise-show__change {
     animation: changeFontSize .2;
