@@ -126,16 +126,14 @@ textarea {
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom; }
 
-.praise {
+.praise-thumb {
   width: 400px;
   margin: 0 auto;
   text-align: center; }
-
-.praise-title {
-  padding: 10px; }
-
-.praise-btn {
-  cursor: pointer; }
+  .praise-thumb .praise-title {
+    padding: 10px; }
+  .praise-thumb .praise-btn {
+    cursor: pointer; }
 
 .praise-show__change {
   -webkit-animation: changeFontSize .2;

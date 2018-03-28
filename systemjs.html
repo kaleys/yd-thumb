@@ -7,8 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Systemjs</title>
     <script src="https://cdn.bootcss.com/systemjs/0.21.0/system-production.js"></script>
+    <link rel="stylesheet" href="dist/thumb.css">
 </head>
 <body>
-    
+    <div class="demo"></div>
+    <script>
+        let a = SystemJS.import('/dist/umd-main.js')
+            .then(function(m) {
+                console.log(m,1111);
+            });
+        
+    </script>
 </body>
 </html>
