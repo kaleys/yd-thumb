@@ -80,7 +80,7 @@ export default class PraiseButton {
 
   checkCount(initCount) {
     return (scope) => {
-      let count = initCount || Number.parseInt(scope.showEl.innerHTML || 0, 10);
+      let count = initCount || parseInt(scope.showEl.innerHTML || 0, 10);
       this.count = count;
       scope.showEl.innerHTML = count;
       return scope;

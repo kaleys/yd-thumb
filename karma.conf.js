@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Thu Mar 29 2018 00:33:40 GMT+0800 (CST)
-
+const webpack = require('webpack');
 module.exports = function(config) {
   config.set({
 
@@ -15,8 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'dist/*.js',
-      'test/*.spec.js'
+      'dist/bundle.js',
+      'test/unit.spec.js'
     ],
 
 
@@ -28,8 +28,33 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'dist/*.js': ['coverage']
+      'test/unit.spec.js': ['webpack' ,'coverage']
     }, 
+    webpack: {
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['env']
+                }
+              }
+            ]
+          }
+        ]
+      },
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"development"'
+          }
+        })
+      ],
+      devtool: '#inline-source-map'
+    },
 
     // optionally, configure the reporter
     coveragereporter: {

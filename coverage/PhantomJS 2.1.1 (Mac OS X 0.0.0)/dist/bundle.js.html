@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/bundle.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">dist/</a> bundle.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.27% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>82/194</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.85% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>26/109</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>50/136</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function webpackUniversalModuleDefinition(root, factory) {
+	<span class="missing-if-branch" title="if path not taken" >I</span>if(typeof exports === 'object' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >typeof module === 'object')</span>
+<span class="cstat-no" title="statement not covered" >		module.exports = factory();</span>
+	else <span class="missing-if-branch" title="if path not taken" >I</span>if(typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >define.amd)</span>
+<span class="cstat-no" title="statement not covered" >		define([], factory);</span>
+	else <span class="missing-if-branch" title="if path not taken" >I</span>if(typeof exports === 'object')
+<span class="cstat-no" title="statement not covered" >		exports["kaleys"] = factory();</span>
+	else
+		root["kaleys"] = factory();
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		<span class="missing-if-branch" title="if path not taken" >I</span>if(installedModules[moduleId]) {
+/******/ 			<span class="cstat-no" title="statement not covered" >return installedModules[moduleId].exports;</span>
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = <span class="fstat-no" title="function not covered" >function(exports, name, getter) {</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >if(!__webpack_require__.o(exports, name)) {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, name, {</span>
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = <span class="fstat-no" title="function not covered" >function(exports) {</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, '__esModule', { value: true });</span>
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = <span class="fstat-no" title="function not covered" >function(module) {</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >var getter = module &amp;&amp; module.__esModule ?</span>
+/******/ 			<span class="fstat-no" title="function not covered" >function getDefault() {</span> <span class="cstat-no" title="statement not covered" >return module['default']; </span>} :
+/******/ 			<span class="fstat-no" title="function not covered" >function getModuleExports() {</span> <span class="cstat-no" title="statement not covered" >return module; </span>};
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.d(getter, 'a', getter);</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >return getter;</span>
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = <span class="fstat-no" title="function not covered" >function(object, property) {</span> <span class="cstat-no" title="statement not covered" >return Object.prototype.hasOwnProperty.call(object, property); </span>};
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/thumb.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+&nbsp;
+/***/ "./src/parise_button.js":
+/*!******************************!*\
+  !*** ./src/parise_button.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+&nbsp;
+"use strict";
+&nbsp;
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+&nbsp;
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; <span class="missing-if-branch" title="else path not taken" >E</span>if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { <span class="missing-if-branch" title="else path not taken" >E</span>if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+&nbsp;
+<span class="fstat-no" title="function not covered" >function _classCallCheck(instance, Constructor) {</span> <span class="cstat-no" title="statement not covered" >if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} </span>}
+&nbsp;
+var Functor = function () {
+<span class="fstat-no" title="function not covered" >  function Functor(val) {</span>
+<span class="cstat-no" title="statement not covered" >    _classCallCheck(this, Functor);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.val = val;</span>
+  }
+&nbsp;
+  _createClass(Functor, [{
+    key: 'map',
+    value: <span class="fstat-no" title="function not covered" >function map(f) {</span>
+<span class="cstat-no" title="statement not covered" >      return Functor.of(f(this.val));</span>
+    }
+  }]);
+&nbsp;
+  return Functor;
+}();
+&nbsp;
+Functor.of = <span class="fstat-no" title="function not covered" >function (val) {</span>
+<span class="cstat-no" title="statement not covered" >  return new Functor(val);</span>
+};
+&nbsp;
+var PraiseButton = function () {
+  /**
+   * 
+   * @param {string or selector} el 初始化的元素
+   * @param {object} options {
+   *  showel: 显示数字的元素
+   *  buttonEl: 按钮元素
+   *  initCount: 初始化点赞数，如果为0，以showEl的html为准
+   *  step: 每次点击加几次
+   * } 
+   */
+<span class="fstat-no" title="function not covered" >  function PraiseButton(el) {</span>
+<span class="cstat-no" title="statement not covered" >    var _ref = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {},</span>
+        _ref$showEl = _ref.showEl,
+        showEl = _ref$showEl === undefined ? '.praise-show' : _ref$showEl,
+        _ref$buttonEl = _ref.buttonEl,
+        buttonEl = _ref$buttonEl === undefined ? '.praise-btn' : _ref$buttonEl,
+        _ref$initCount = _ref.initCount,
+        initCount = _ref$initCount === undefined ? 0 : _ref$initCount,
+        _ref$step = _ref.step,
+        step = _ref$step === undefined ? 1 : _ref$step;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    _classCallCheck(this, PraiseButton);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    Functor.of(this).map(this.checkContainer(el)).map(this.checkShowEl(showEl)).map(this.checkButton(buttonEl)).map(this.checkCount(initCount));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.step = step;</span>
+<span class="cstat-no" title="statement not covered" >    this.bindEvent();</span>
+  }
+&nbsp;
+  _createClass(PraiseButton, [{
+    key: 'bindEvent',
+    value: <span class="fstat-no" title="function not covered" >function bindEvent() {</span>
+<span class="cstat-no" title="statement not covered" >      var btn = this.btn,</span>
+          self = this;
+<span class="cstat-no" title="statement not covered" >      btn.addEventListener('click', <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >        self.praise(e);</span>
+<span class="cstat-no" title="statement not covered" >        e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+      });
+    }
+  }, {
+    key: 'praise',
+    value: <span class="fstat-no" title="function not covered" >function praise(e) {</span>
+<span class="cstat-no" title="statement not covered" >      var showEl = this.showEl;</span>
+<span class="cstat-no" title="statement not covered" >      this.count += this.step;</span>
+<span class="cstat-no" title="statement not covered" >      showEl.innerHTML = this.count;</span>
+    }
+  }, {
+    key: 'checkContainer',
+    value: <span class="fstat-no" title="function not covered" >function checkContainer(el) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (!el) {</span>
+<span class="cstat-no" title="statement not covered" >          throw Error('没有初始元素选择器');</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        scope.container = typeof el == 'string' ? document.querySelector(el) : el;</span>
+<span class="cstat-no" title="statement not covered" >        return scope;</span>
+      };
+    }
+  }, {
+    key: 'checkButton',
+    value: <span class="fstat-no" title="function not covered" >function checkButton(btnEl) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >        scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn', <span class="fstat-no" title="function not covered" >function (el) {</span></span>
+<span class="cstat-no" title="statement not covered" >          el.innerHTML = "点赞";</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return scope;</span>
+      };
+    }
+  }, {
+    key: 'checkShowEl',
+    value: <span class="fstat-no" title="function not covered" >function checkShowEl(showEl) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >        scope.showEl = PraiseButton.checkEl(scope.container, showEl, 'parise-show');</span>
+<span class="cstat-no" title="statement not covered" >        return scope;</span>
+      };
+    }
+  }, {
+    key: 'checkCount',
+    value: <span class="fstat-no" title="function not covered" >function checkCount(initCount) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var count = initCount || Number.parseInt(scope.showEl.innerHTML || 0, 10);</span>
+<span class="cstat-no" title="statement not covered" >        _this.count = count;</span>
+<span class="cstat-no" title="statement not covered" >        scope.showEl.innerHTML = count;</span>
+<span class="cstat-no" title="statement not covered" >        return scope;</span>
+      };
+    }
+  }], [{
+    key: 'checkEl',
+    value: <span class="fstat-no" title="function not covered" >function checkEl(parent, selector, className, beforeCreateCb) {</span>
+<span class="cstat-no" title="statement not covered" >      if (selector instanceof Element) <span class="cstat-no" title="statement not covered" >return selector;</span></span>
+<span class="cstat-no" title="statement not covered" >      var el = void 0;</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof selector == 'string') {</span>
+<span class="cstat-no" title="statement not covered" >        el = parent.querySelector(selector);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (!el) {</span>
+<span class="cstat-no" title="statement not covered" >        el = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >        el.className = className;</span>
+<span class="cstat-no" title="statement not covered" >        beforeCreateCb &amp;&amp; beforeCreateCb(el);</span>
+<span class="cstat-no" title="statement not covered" >        parent.appendChild(el);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      return el;</span>
+    }
+  }]);
+&nbsp;
+  return PraiseButton;
+}();
+&nbsp;
+exports.default = PraiseButton;
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/thumb.js":
+/*!**********************!*\
+  !*** ./src/thumb.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+&nbsp;
+"use strict";
+&nbsp;
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Thumb = undefined;
+&nbsp;
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; <span class="missing-if-branch" title="else path not taken" >E</span>if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { <span class="missing-if-branch" title="else path not taken" >E</span>if (protoProps) defineProperties(Constructor.prototype, protoProps); <span class="missing-if-branch" title="if path not taken" >I</span>if (staticProps) <span class="cstat-no" title="statement not covered" >defineProperties(Constructor, staticProps); </span>return Constructor; }; }();
+&nbsp;
+var _get = <span class="fstat-no" title="function not covered" >function get(object, property, receiver) {</span> <span class="cstat-no" title="statement not covered" >if (object === null) <span class="cstat-no" title="statement not covered" >object = Function.prototype; <span class="cstat-no" title="statement not covered" ></span></span>var desc = Object.getOwnPropertyDescriptor(object, property); <span class="cstat-no" title="statement not covered" ></span>if (desc === undefined) { <span class="cstat-no" title="statement not covered" >var parent = Object.getPrototypeOf(object); <span class="cstat-no" title="statement not covered" ></span>if (parent === null) { <span class="cstat-no" title="statement not covered" >return undefined; </span>} else { <span class="cstat-no" title="statement not covered" >return get(parent, property, receiver); </span>} </span>} else <span class="cstat-no" title="statement not covered" >if ("value" in desc) { <span class="cstat-no" title="statement not covered" >return desc.value; </span>} else { <span class="cstat-no" title="statement not covered" >var getter = desc.get; <span class="cstat-no" title="statement not covered" ></span>if (getter === undefined) { <span class="cstat-no" title="statement not covered" >return undefined; </span>} <span class="cstat-no" title="statement not covered" ></span>return getter.call(receiver); </span>} </span></span>};
+&nbsp;
+var _parise_button = __webpack_require__(/*! ./parise_button */ "./src/parise_button.js");
+&nbsp;
+var _parise_button2 = _interopRequireDefault(_parise_button);
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : <span class="branch-1 cbranch-no" title="branch not covered" >{ default: obj };</span> }
+&nbsp;
+<span class="fstat-no" title="function not covered" >function _classCallCheck(instance, Constructor) {</span> <span class="cstat-no" title="statement not covered" >if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} </span>}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function _possibleConstructorReturn(self, call) {</span> <span class="cstat-no" title="statement not covered" >if (!self) { <span class="cstat-no" title="statement not covered" >throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); </span>} <span class="cstat-no" title="statement not covered" ></span>return call &amp;&amp; (typeof call === "object" || typeof call === "function") ? call : self; </span>}
+&nbsp;
+function _inherits(subClass, superClass) { <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof superClass !== "function" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >superClass !== null)</span> { <span class="cstat-no" title="statement not covered" >throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); </span>} subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); <span class="missing-if-branch" title="else path not taken" >E</span>if (superClass) Object.setPrototypeOf ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.setPrototypeOf(subClass, superClass) </span>: subClass.__proto__ = superClass; }
+&nbsp;
+var once = <span class="fstat-no" title="function not covered" >function once(el, eventName, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  var fn = <span class="fstat-no" title="function not covered" >function fn() {</span></span>
+<span class="cstat-no" title="statement not covered" >    callback();</span>
+<span class="cstat-no" title="statement not covered" >    el.removeEventListener(eventName, fn);</span>
+  };
+<span class="cstat-no" title="statement not covered" >  el.addEventListener(eventName, fn);</span>
+};
+&nbsp;
+var Thumb = exports.Thumb = function (_PariseButton) {
+  _inherits(Thumb, _PariseButton);
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function Thumb(el) {</span>
+<span class="cstat-no" title="statement not covered" >    var options = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    _classCallCheck(this, Thumb);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var _this = _possibleConstructorReturn(this, (Thumb.__proto__ || Object.getPrototypeOf(Thumb)).call(this, el, options));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var clsName = _this.container.className;</span>
+<span class="cstat-no" title="statement not covered" >    if (clsName.indexOf('praise-thumb') === -1) {</span>
+<span class="cstat-no" title="statement not covered" >      _this.container.clsName = clsName.split(' ').push('praise-thumb').join(' ');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var titleWrapper = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >    titleWrapper.className = 'parise-title';</span>
+<span class="cstat-no" title="statement not covered" >    titleWrapper.innerHTML = '&lt;span class="praise-title__label"&gt;点赞数：&lt;/span&gt;';</span>
+<span class="cstat-no" title="statement not covered" >    titleWrapper.appendChild(_this.showEl);</span>
+<span class="cstat-no" title="statement not covered" >    _this.container.insertBefore(titleWrapper, _this.btn);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    _this.btn.className += ' thumb';</span>
+<span class="cstat-no" title="statement not covered" >    _this.btn.innerHTML = '&lt;div class="thumb-connect"&gt;&lt;/div&gt;\n            &lt;div class="thumb-thumb"&gt;&lt;/div&gt;\n            &lt;div class="thumb-finger-first"&gt;&lt;/div&gt;\n            &lt;div class="thumb-fingter-sec"&gt;&lt;/div&gt;\n            &lt;div class="thumb-wrist"&gt;&lt;/div&gt;';</span>
+<span class="cstat-no" title="statement not covered" >    _this.animating = false;</span>
+<span class="cstat-no" title="statement not covered" >    return _this;</span>
+  }
+&nbsp;
+  _createClass(Thumb, [{
+    key: 'praise',
+    value: <span class="fstat-no" title="function not covered" >function praise(e) {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.animating) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >      _get(Thumb.prototype.__proto__ || Object.getPrototypeOf(Thumb.prototype), 'praise', this).call(this);</span>
+<span class="cstat-no" title="statement not covered" >      this.startAnimate();</span>
+    }
+  }, {
+    key: 'startAnimate',
+    value: <span class="fstat-no" title="function not covered" >function startAnimate() {</span>
+<span class="cstat-no" title="statement not covered" >      once(this.showEl, 'animationend', this.completeAnimate.bind(this));</span>
+<span class="cstat-no" title="statement not covered" >      this.animating = true;</span>
+<span class="cstat-no" title="statement not covered" >      this.showEl.className += ' parise-show__change';</span>
+    }
+  }, {
+    key: 'completeAnimate',
+    value: <span class="fstat-no" title="function not covered" >function completeAnimate() {</span>
+<span class="cstat-no" title="statement not covered" >      var cls = this.showEl.className.replace(' parise-show__change', '');</span>
+<span class="cstat-no" title="statement not covered" >      this.showEl.className = cls;</span>
+<span class="cstat-no" title="statement not covered" >      this.animating = false;</span>
+    }
+  }]);
+&nbsp;
+  return Thumb;
+}(_parise_button2.default);
+&nbsp;
+/***/ })
+&nbsp;
+/******/ });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9rYWxleXMvd2VicGFjay91bml2ZXJzYWxNb2R1bGVEZWZpbml0aW9uIiwid2VicGFjazovL2thbGV5cy93ZWJwYWNrL2Jvb3RzdHJhcCIsIndlYnBhY2s6Ly9rYWxleXMvLi9zcmMvcGFyaXNlX2J1dHRvbi5qcyIsIndlYnBhY2s6Ly9rYWxleXMvLi9zcmMvdGh1bWIuanMiXSwibmFtZXMiOlsiRnVuY3RvciIsInZhbCIsImYiLCJvZiIsIlByYWlzZUJ1dHRvbiIsImVsIiwic2hvd0VsIiwiYnV0dG9uRWwiLCJpbml0Q291bnQiLCJzdGVwIiwibWFwIiwiY2hlY2tDb250YWluZXIiLCJjaGVja1Nob3dFbCIsImNoZWNrQnV0dG9uIiwiY2hlY2tDb3VudCIsImJpbmRFdmVudCIsImJ0biIsInNlbGYiLCJhZGRFdmVudExpc3RlbmVyIiwiZSIsInByYWlzZSIsInByZXZlbnREZWZhdWx0IiwiY291bnQiLCJpbm5lckhUTUwiLCJzY29wZSIsIkVycm9yIiwiY29udGFpbmVyIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiYnRuRWwiLCJjaGVja0VsIiwiTnVtYmVyIiwicGFyc2VJbnQiLCJwYXJlbnQiLCJzZWxlY3RvciIsImNsYXNzTmFtZSIsImJlZm9yZUNyZWF0ZUNiIiwiRWxlbWVudCIsImNyZWF0ZUVsZW1lbnQiLCJhcHBlbmRDaGlsZCIsIm9uY2UiLCJldmVudE5hbWUiLCJjYWxsYmFjayIsImZuIiwicmVtb3ZlRXZlbnRMaXN0ZW5lciIsIlRodW1iIiwib3B0aW9ucyIsImNsc05hbWUiLCJpbmRleE9mIiwic3BsaXQiLCJwdXNoIiwiam9pbiIsInRpdGxlV3JhcHBlciIsImluc2VydEJlZm9yZSIsImFuaW1hdGluZyIsInN0YXJ0QW5pbWF0ZSIsImNvbXBsZXRlQW5pbWF0ZSIsImJpbmQiLCJjbHMiLCJyZXBsYWNlIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFD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N0I7Ozs7MkJBRU1uQyxDLEVBQUc7QUFDUixVQUFJLEtBQUttQyxTQUFULEVBQW9CO0FBQ3BCO0FBQ0EsV0FBS0MsWUFBTDtBQUNEOzs7bUNBRWE7QUFDWmYsV0FBSyxLQUFLbEMsTUFBVixFQUFrQixjQUFsQixFQUFrQyxLQUFLa0QsZUFBTCxDQUFxQkMsSUFBckIsQ0FBMEIsSUFBMUIsQ0FBbEM7QUFDQSxXQUFLSCxTQUFMLEdBQWlCLElBQWpCO0FBQ0EsV0FBS2hELE1BQUwsQ0FBWTZCLFNBQVosSUFBeUIsc0JBQXpCO0FBQ0Q7OztzQ0FDaUI7QUFDaEIsVUFBSXVCLE1BQU0sS0FBS3BELE1BQUwsQ0FBWTZCLFNBQVosQ0FBc0J3QixPQUF0QixDQUE4QixzQkFBOUIsRUFBc0QsRUFBdEQsQ0FBVjtBQUNBLFdBQUtyRCxNQUFMLENBQVk2QixTQUFaLEdBQXdCdUIsR0FBeEI7QUFDQSxXQUFLSixTQUFMLEdBQWlCLEtBQWpCO0FBQ0QiLCJmaWxlIjoiYnVuZGxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uIHdlYnBhY2tVbml2ZXJzYWxNb2R1bGVEZWZpbml0aW9uKHJvb3QsIGZhY3RvcnkpIHtcblx0aWYodHlwZW9mIGV4cG9ydHMgPT09ICdvYmplY3QnICYmIHR5cGVvZiBtb2R1bGUgPT09ICdvYmplY3QnKVxuXHRcdG1vZHVsZS5leHBvcnRzID0gZmFjdG9yeSgpO1xuXHRlbHNlIGlmKHR5cGVvZiBkZWZpbmUgPT09ICdmdW5jdGlvbicgJiYgZGVmaW5lLmFtZClcblx0XHRkZWZpbmUoW10sIGZhY3RvcnkpO1xuXHRlbHNlIGlmKHR5cGVvZiBleHBvcnRzID09PSAnb2JqZWN0Jylcblx0XHRleHBvcnRzW1wia2FsZXlzXCJdID0gZmFjdG9yeSgpO1xuXHRlbHNlXG5cdFx0cm9vdFtcImthbGV5c1wiXSA9IGZhY3RvcnkoKTtcbn0pKHdpbmRvdywgZnVuY3Rpb24oKSB7XG5yZXR1cm4gIiwiIFx0Ly8gVGhlIG1vZHVsZSBjYWNoZVxuIFx0dmFyIGluc3RhbGxlZE1vZHVsZXMgPSB7fTtcblxuIFx0Ly8gVGhlIHJlcXVpcmUgZnVuY3Rpb25cbiBcdGZ1bmN0aW9uIF9fd2VicGFja19yZXF1aXJlX18obW9kdWxlSWQpIHtcblxuIFx0XHQvLyBDaGVjayBpZiBtb2R1bGUgaXMgaW4gY2FjaGVcbiBcdFx0aWYoaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0pIHtcbiBcdFx0XHRyZXR1cm4gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0uZXhwb3J0cztcbiBcdFx0fVxuIFx0XHQvLyBDcmVhdGUgYSBuZXcgbW9kdWxlIChhbmQgcHV0IGl0IGludG8gdGhlIGNhY2hlKVxuIFx0XHR2YXIgbW9kdWxlID0gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0gPSB7XG4gXHRcdFx0aTogbW9kdWxlSWQsXG4gXHRcdFx0bDogZmFsc2UsXG4gXHRcdFx0ZXhwb3J0czoge31cbiBcdFx0fTtcblxuIFx0XHQvLyBFeGVjdXRlIHRoZSBtb2R1bGUgZnVuY3Rpb25cbiBcdFx0bW9kdWxlc1ttb2R1bGVJZF0uY2FsbChtb2R1bGUuZXhwb3J0cywgbW9kdWxlLCBtb2R1bGUuZXhwb3J0cywgX193ZWJwYWNrX3JlcXVpcmVfXyk7XG5cbiBcdFx0Ly8gRmxhZyB0aGUgbW9kdWxlIGFzIGxvYWRlZFxuIFx0XHRtb2R1bGUubCA9IHRydWU7XG5cbiBcdFx0Ly8gUmV0dXJuIHRoZSBleHBvcnRzIG9mIHRoZSBtb2R1bGVcbiBcdFx0cmV0dXJuIG1vZHVsZS5leHBvcnRzO1xuIFx0fVxuXG5cbiBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlcyBvYmplY3QgKF9fd2VicGFja19tb2R1bGVzX18pXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm0gPSBtb2R1bGVzO1xuXG4gXHQvLyBleHBvc2UgdGhlIG1vZHVsZSBjYWNoZVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5jID0gaW5zdGFsbGVkTW9kdWxlcztcblxuIFx0Ly8gZGVmaW5lIGdldHRlciBmdW5jdGlvbiBmb3IgaGFybW9ueSBleHBvcnRzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLmQgPSBmdW5jdGlvbihleHBvcnRzLCBuYW1lLCBnZXR0ZXIpIHtcbiBcdFx0aWYoIV9fd2VicGFja19yZXF1aXJlX18ubyhleHBvcnRzLCBuYW1lKSkge1xuIFx0XHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBuYW1lLCB7XG4gXHRcdFx0XHRjb25maWd1cmFibGU6IGZhbHNlLFxuIFx0XHRcdFx0ZW51bWVyYWJsZTogdHJ1ZSxcbiBcdFx0XHRcdGdldDogZ2V0dGVyXG4gXHRcdFx0fSk7XG4gXHRcdH1cbiBcdH07XG5cbiBcdC8vIGRlZmluZSBfX2VzTW9kdWxlIG9uIGV4cG9ydHNcbiBcdF9fd2VicGFja19yZXF1aXJlX18uciA9IGZ1bmN0aW9uKGV4cG9ydHMpIHtcbiBcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICdfX2VzTW9kdWxlJywgeyB2YWx1ZTogdHJ1ZSB9KTtcbiBcdH07XG5cbiBcdC8vIGdldERlZmF1bHRFeHBvcnQgZnVuY3Rpb24gZm9yIGNvbXBhdGliaWxpdHkgd2l0aCBub24taGFybW9ueSBtb2R1bGVzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm4gPSBmdW5jdGlvbihtb2R1bGUpIHtcbiBcdFx0dmFyIGdldHRlciA9IG1vZHVsZSAmJiBtb2R1bGUuX19lc01vZHVsZSA/XG4gXHRcdFx0ZnVuY3Rpb24gZ2V0RGVmYXVsdCgpIHsgcmV0dXJuIG1vZHVsZVsnZGVmYXVsdCddOyB9IDpcbiBcdFx0XHRmdW5jdGlvbiBnZXRNb2R1bGVFeHBvcnRzKCkgeyByZXR1cm4gbW9kdWxlOyB9O1xuIFx0XHRfX3dlYnBhY2tfcmVxdWlyZV9fLmQoZ2V0dGVyLCAnYScsIGdldHRlcik7XG4gXHRcdHJldHVybiBnZXR0ZXI7XG4gXHR9O1xuXG4gXHQvLyBPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGxcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubyA9IGZ1bmN0aW9uKG9iamVjdCwgcHJvcGVydHkpIHsgcmV0dXJuIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChvYmplY3QsIHByb3BlcnR5KTsgfTtcblxuIFx0Ly8gX193ZWJwYWNrX3B1YmxpY19wYXRoX19cbiBcdF9fd2VicGFja19yZXF1aXJlX18ucCA9IFwiXCI7XG5cblxuIFx0Ly8gTG9hZCBlbnRyeSBtb2R1bGUgYW5kIHJldHVybiBleHBvcnRzXG4gXHRyZXR1cm4gX193ZWJwYWNrX3JlcXVpcmVfXyhfX3dlYnBhY2tfcmVxdWlyZV9fLnMgPSBcIi4vc3JjL3RodW1iLmpzXCIpO1xuIiwiY2xhc3MgRnVuY3RvciB7XG4gIGNvbnN0cnVjdG9yKHZhbCkge1xuICAgIHRoaXMudmFsID0gdmFsO1xuICB9XG4gIG1hcChmKSB7XG4gICAgcmV0dXJuIEZ1bmN0b3Iub2YoZih0aGlzLnZhbCkpO1xuICB9XG59XG5GdW5jdG9yLm9mID0gKHZhbCkgPT4gbmV3IEZ1bmN0b3IodmFsKTtcblxuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBQcmFpc2VCdXR0b24ge1xuICAvKipcbiAgICogXG4gICAqIEBwYXJhbSB7c3RyaW5nIG9yIHNlbGVjdG9yfSBlbCDliJ3lp4vljJbnmoTlhYPntKBcbiAgICogQHBhcmFtIHtvYmplY3R9IG9wdGlvbnMge1xuICAgKiAgc2hvd2VsOiDmmL7npLrmlbDlrZfnmoTlhYPntKBcbiAgICogIGJ1dHRvbkVsOiDmjInpkq7lhYPntKBcbiAgICogIGluaXRDb3VudDog5Yid5aeL5YyW54K56LWe5pWw77yM5aaC5p6c5Li6MO+8jOS7pXNob3dFbOeahGh0bWzkuLpcdTAwMTPlh4ZcbiAgICogIHN0ZXA6IOavj+asoeeCueWHu+WKoOWHoOasoVxuICAgKiB9IFxuICAgKi9cbiAgY29uc3RydWN0b3IoZWwsIHtcbiAgICBzaG93RWwgPSAnLnByYWlzZS1zaG93JyxcbiAgICBidXR0b25FbCA9ICcucHJhaXNlLWJ0bicsXG4gICAgaW5pdENvdW50ID0gMCxcbiAgICBzdGVwID0gMVxuICB9ID0ge30pIHtcbiAgICBGdW5jdG9yLm9mKHRoaXMpXG4gICAgICAubWFwKHRoaXMuY2hlY2tDb250YWluZXIoZWwpKVxuICAgICAgLm1hcCh0aGlzLmNoZWNrU2hvd0VsKHNob3dFbCkpXG4gICAgICAubWFwKHRoaXMuY2hlY2tCdXR0b24oYnV0dG9uRWwpKVxuICAgICAgLm1hcCh0aGlzLmNoZWNrQ291bnQoaW5pdENvdW50KSk7XG5cbiAgICB0aGlzLnN0ZXAgPSBzdGVwO1xuICAgIHRoaXMuYmluZEV2ZW50KCk7XG4gIH1cblxuICBiaW5kRXZlbnQoKSB7XG4gICAgbGV0IGJ0biA9IHRoaXMuYnRuLFxuICAgICAgc2VsZiA9IHRoaXM7XG4gICAgYnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24gKGUpIHtcbiAgICAgIHNlbGYucHJhaXNlKGUpO1xuICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgICAgcmV0dXJuIGZhbHNlO1xuICAgIH0pXG4gIH1cblxuICBwcmFpc2UoZSkge1xuICAgIGxldCBzaG93RWwgPSB0aGlzLnNob3dFbDtcbiAgICB0aGlzLmNvdW50ICs9IHRoaXMuc3RlcDtcbiAgICBzaG93RWwuaW5uZXJIVE1MID0gdGhpcy5jb3VudDtcbiAgfVxuICBjaGVja0NvbnRhaW5lcihlbCkge1xuICAgIHJldHVybiAoc2NvcGUpID0+IHtcbiAgICAgIGlmICghZWwpIHtcbiAgICAgICAgdGhyb3cgRXJyb3IoJ+ayoeacieWIneWni+WFg+e0oOmAieaLqeWZqCcpO1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG4gICAgICBzY29wZS5jb250YWluZXIgPSB0eXBlb2YgZWwgPT0gJ3N0cmluZycgPyBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGVsKSA6IGVsO1xuICAgICAgcmV0dXJuIHNjb3BlO1xuICAgIH1cbiAgfVxuXG4gIGNoZWNrQnV0dG9uKGJ0bkVsKSB7XG4gICAgcmV0dXJuIChzY29wZSkgPT4ge1xuICAgICAgc2NvcGUuYnRuID0gUHJhaXNlQnV0dG9uLmNoZWNrRWwoc2NvcGUuY29udGFpbmVyLCBidG5FbCwgJ3BhcmlzZS1idG4nLCAoZWwpID0+IHtcbiAgICAgICAgZWwuaW5uZXJIVE1MID0gXCLngrnotZ5cIlxuICAgICAgfSk7XG4gICAgICByZXR1cm4gc2NvcGU7XG4gICAgfVxuICB9XG5cbiAgY2hlY2tTaG93RWwoc2hvd0VsKSB7XG4gICAgcmV0dXJuIChzY29wZSkgPT4ge1xuICAgICAgc2NvcGUuc2hvd0VsID0gUHJhaXNlQnV0dG9uLmNoZWNrRWwoc2NvcGUuY29udGFpbmVyLCBzaG93RWwsICdwYXJpc2Utc2hvdycpO1xuICAgICAgcmV0dXJuIHNjb3BlO1xuICAgIH1cbiAgfVxuXG4gIGNoZWNrQ291bnQoaW5pdENvdW50KSB7XG4gICAgcmV0dXJuIChzY29wZSkgPT4ge1xuICAgICAgbGV0IGNvdW50ID0gaW5pdENvdW50IHx8IE51bWJlci5wYXJzZUludChzY29wZS5zaG93RWwuaW5uZXJIVE1MIHx8IDAsIDEwKTtcbiAgICAgIHRoaXMuY291bnQgPSBjb3VudDtcbiAgICAgIHNjb3BlLnNob3dFbC5pbm5lckhUTUwgPSBjb3VudDtcbiAgICAgIHJldHVybiBzY29wZTtcbiAgICB9XG4gIH1cblxuICBzdGF0aWMgY2hlY2tFbChwYXJlbnQsIHNlbGVjdG9yLCBjbGFzc05hbWUsIGJlZm9yZUNyZWF0ZUNiKSB7XG4gICAgaWYgKHNlbGVjdG9yIGluc3RhbmNlb2YgRWxlbWVudCkgcmV0dXJuIHNlbGVjdG9yO1xuICAgIGxldCBlbDtcbiAgICBpZiAodHlwZW9mIHNlbGVjdG9yID09ICdzdHJpbmcnKSB7XG4gICAgICBlbCA9IHBhcmVudC5xdWVyeVNlbGVjdG9yKHNlbGVjdG9yKTtcbiAgICB9XG4gICAgaWYgKCFlbCkge1xuICAgICAgZWwgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbiAgICAgIGVsLmNsYXNzTmFtZSA9IGNsYXNzTmFtZTtcbiAgICAgIGJlZm9yZUNyZWF0ZUNiICYmIGJlZm9yZUNyZWF0ZUNiKGVsKTtcbiAgICAgIHBhcmVudC5hcHBlbmRDaGlsZChlbCk7XG4gICAgfVxuICAgIHJldHVybiBlbDtcbiAgfVxufSIsImltcG9ydCBQYXJpc2VCdXR0b24gZnJvbSAnLi9wYXJpc2VfYnV0dG9uJztcblxuXG5jb25zdCBvbmNlID0gZnVuY3Rpb24oZWwsIGV2ZW50TmFtZSwgY2FsbGJhY2spIHtcbiAgbGV0IGZuID0gZnVuY3Rpb24oKXtcbiAgICBjYWxsYmFjaygpO1xuICAgIGVsLnJlbW92ZUV2ZW50TGlzdGVuZXIoZXZlbnROYW1lLCBmbik7XG4gIH1cbiAgZWwuYWRkRXZlbnRMaXN0ZW5lcihldmVudE5hbWUsIGZuKTtcbn1cbmV4cG9ydCBjbGFzcyBUaHVtYiBleHRlbmRzIFBhcmlzZUJ1dHRvbiB7XG4gIGNvbnN0cnVjdG9yKGVsLCBvcHRpb25zID0ge30pIHtcbiAgICBzdXBlcihlbCwgb3B0aW9ucyk7XG5cbiAgICBsZXQgY2xzTmFtZSA9IHRoaXMuY29udGFpbmVyLmNsYXNzTmFtZTtcbiAgICBpZiAoY2xzTmFtZS5pbmRleE9mKCdwcmFpc2UtdGh1bWInKSA9PT0gLTEpIHtcbiAgICAgIHRoaXMuY29udGFpbmVyLmNsc05hbWUgPSBjbHNOYW1lLnNwbGl0KCcgJykucHVzaCgncHJhaXNlLXRodW1iJykuam9pbignICcpO1xuICAgIH1cblxuICAgIGxldCB0aXRsZVdyYXBwZXIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbiAgICB0aXRsZVdyYXBwZXIuY2xhc3NOYW1lID0gJ3BhcmlzZS10aXRsZSc7XG4gICAgdGl0bGVXcmFwcGVyLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz1cInByYWlzZS10aXRsZV9fbGFiZWxcIj7ngrnotZ7mlbDvvJo8L3NwYW4+JztcbiAgICB0aXRsZVdyYXBwZXIuYXBwZW5kQ2hpbGQodGhpcy5zaG93RWwpO1xuICAgIHRoaXMuY29udGFpbmVyLmluc2VydEJlZm9yZSh0aXRsZVdyYXBwZXIsIHRoaXMuYnRuKTtcblxuICAgIHRoaXMuYnRuLmNsYXNzTmFtZSArPSAnIHRodW1iJztcbiAgICB0aGlzLmJ0bi5pbm5lckhUTUwgPSBgPGRpdiBjbGFzcz1cInRodW1iLWNvbm5lY3RcIj48L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJ0aHVtYi10aHVtYlwiPjwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInRodW1iLWZpbmdlci1maXJzdFwiPjwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzcz1cInRodW1iLWZpbmd0ZXItc2VjXCI+PC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwidGh1bWItd3Jpc3RcIj48L2Rpdj5gO1xuICAgIHRoaXMuYW5pbWF0aW5nID0gZmFsc2U7XG4gIH1cblxuICBwcmFpc2UoZSkge1xuICAgIGlmICh0aGlzLmFuaW1hdGluZykgcmV0dXJuO1xuICAgIHN1cGVyLnByYWlzZSgpO1xuICAgIHRoaXMuc3RhcnRBbmltYXRlKCk7XG4gIH1cblxuICBzdGFydEFuaW1hdGUoKXtcbiAgICBvbmNlKHRoaXMuc2hvd0VsLCAnYW5pbWF0aW9uZW5kJywgdGhpcy5jb21wbGV0ZUFuaW1hdGUuYmluZCh0aGlzKSk7XG4gICAgdGhpcy5hbmltYXRpbmcgPSB0cnVlO1xuICAgIHRoaXMuc2hvd0VsLmNsYXNzTmFtZSArPSAnIHBhcmlzZS1zaG93X19jaGFuZ2UnO1xuICB9XG4gIGNvbXBsZXRlQW5pbWF0ZSgpIHtcbiAgICBsZXQgY2xzID0gdGhpcy5zaG93RWwuY2xhc3NOYW1lLnJlcGxhY2UoJyBwYXJpc2Utc2hvd19fY2hhbmdlJywgJycpO1xuICAgIHRoaXMuc2hvd0VsLmNsYXNzTmFtZSA9IGNscztcbiAgICB0aGlzLmFuaW1hdGluZyA9IGZhbHNlO1xuICB9XG5cbn0iXSwic291cmNlUm9vdCI6IiJ9</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 01 2018 00:15:02 GMT+0800 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

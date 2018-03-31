@@ -9,7 +9,7 @@
     <title>点赞</title>
 </head>
 <body>
-    <div class="praise-thumb"></div>
+    <div id="a"></div>
     <script>
         SystemJS.config({
             map: {
@@ -25,9 +25,7 @@
                     new m.Thumb(this, options);
                 })
             }
-
-            $('.praise-thumb').thumb();
-            // console.log($)
+            $('#a').thumb();
             
         })
         // new Thumb('.praise-thumb');

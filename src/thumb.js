@@ -11,10 +11,11 @@ const once = function(el, eventName, callback) {
 export class Thumb extends PariseButton {
   constructor(el, options = {}) {
     super(el, options);
-
-    let clsName = this.container.className;
+    let clsName = this.container.className||'';
     if (clsName.indexOf('praise-thumb') === -1) {
-      this.container.clsName = clsName.split(' ').push('praise-thumb').join(' ');
+      clsName = clsName.split(' ');
+      clsName.push('praise-thumb');
+      this.container.className = clsName.join(' ');
     }
 
     let titleWrapper = document.createElement('div');
