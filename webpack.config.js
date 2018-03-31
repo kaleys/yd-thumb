@@ -1,13 +1,15 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './src/thumb.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    libraryTarget: 'umd',
+    library:'kaleys'
   },
   module: {
     rules: [
@@ -21,16 +23,26 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      // {
+      //   test: '/\.scss$/',
+      //   use: ExtractTextPlugin.extract({
+      //     use: [
+      //       'css-loader',
+      //       'scss-loader'
+      //     ]
+      //   })
+      // }
     ]
   },
-  // devtool: 'inline-source-map',
+
+  devtool: 'inline-source-map',
   plugins: [
     // new CleanWebpackPlugin(['dist']),
     // new ExtractTextPlugin('style.css'), //报错
-    new htmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html'
-    })
+    // new htmlWebpackPlugin({
+    //   filename: 'index.html',
+    //   template: 'index.html'
+    // })
   ]
 }

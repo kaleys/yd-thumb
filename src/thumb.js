@@ -1,5 +1,14 @@
-import PraiseButton from './parise_button.js';
-export default class Thumb extends PraiseButton {
+import PariseButton from './parise_button';
+
+
+const once = function(el, eventName, callback) {
+  let fn = function(){
+    callback();
+    el.removeEventListener(eventName, fn);
+  }
+  el.addEventListener(eventName, fn);
+}
+export class Thumb extends PariseButton {
   constructor(el, options = {}) {
     super(el, options);
 
@@ -9,10 +18,10 @@ export default class Thumb extends PraiseButton {
     }
 
     let titleWrapper = document.createElement('div');
-    titleWrapper.className = 'praise-title';
+    titleWrapper.className = 'parise-title';
     titleWrapper.innerHTML = '<span class="praise-title__label">点赞数：</span>';
     titleWrapper.appendChild(this.showEl);
-    this.container.appendChild(titleWrapper);
+    this.container.insertBefore(titleWrapper, this.btn);
 
     this.btn.className += ' thumb';
     this.btn.innerHTML = `<div class="thumb-connect"></div>
@@ -20,11 +29,24 @@ export default class Thumb extends PraiseButton {
             <div class="thumb-finger-first"></div>
             <div class="thumb-fingter-sec"></div>
             <div class="thumb-wrist"></div>`;
+    this.animating = false;
   }
 
   praise(e) {
-    let target = e.target;
+    if (this.animating) return;
     super.praise();
+    this.startAnimate();
+  }
+
+  startAnimate(){
+    once(this.showEl, 'animationend', this.completeAnimate.bind(this));
+    this.animating = true;
+    this.showEl.className += ' parise-show__change';
+  }
+  completeAnimate() {
+    let cls = this.showEl.className.replace(' parise-show__change', '');
+    this.showEl.className = cls;
+    this.animating = false;
   }
 
 }

@@ -9,7 +9,7 @@ class Functor {
 Functor.of = (val) => new Functor(val);
 
 
-class PraiseButton {
+export default class PraiseButton {
   /**
    * 
    * @param {string or selector} el 初始化的元素
