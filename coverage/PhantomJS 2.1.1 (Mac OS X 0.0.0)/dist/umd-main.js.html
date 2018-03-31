@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/umd-main.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">dist/</a> umd-main.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.87% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/131</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.3% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/91</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.03% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.78% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/92</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global, factory){
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof module === 'object' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >typeof module.exports === 'object')</span> {
+<span class="cstat-no" title="statement not covered" >        module.exports = global.document ? factory(global, true): <span class="fstat-no" title="function not covered" >function(w) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (!w.document) {</span>
+<span class="cstat-no" title="statement not covered" >                throw new Error('没有document对象')</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return factory(w)</span>
+        }
+    }
+}(typeof window !== 'undefined' ? window: <span class="branch-1 cbranch-no" title="branch not covered" >this,</span> <span class="fstat-no" title="function not covered" >function(window, noGlobal){</span>
+    'use strict';
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var _get = <span class="fstat-no" title="function not covered" >function get(object, property, receiver) {</span> <span class="cstat-no" title="statement not covered" >if (object === null) <span class="cstat-no" title="statement not covered" >object = Function.prototype; <span class="cstat-no" title="statement not covered" ></span></span>var desc = Object.getOwnPropertyDescriptor(object, property); <span class="cstat-no" title="statement not covered" ></span>if (desc === undefined) { <span class="cstat-no" title="statement not covered" >var parent = Object.getPrototypeOf(object); <span class="cstat-no" title="statement not covered" ></span>if (parent === null) { <span class="cstat-no" title="statement not covered" >return undefined; </span>} else { <span class="cstat-no" title="statement not covered" >return get(parent, property, receiver); </span>} </span>} else <span class="cstat-no" title="statement not covered" >if ("value" in desc) { <span class="cstat-no" title="statement not covered" >return desc.value; </span>} else { <span class="cstat-no" title="statement not covered" >var getter = desc.get; <span class="cstat-no" title="statement not covered" ></span>if (getter === undefined) { <span class="cstat-no" title="statement not covered" >return undefined; </span>} <span class="cstat-no" title="statement not covered" ></span>return getter.call(receiver); </span>} </span></span>};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var _createClass = <span class="fstat-no" title="function not covered" >function () {</span> <span class="fstat-no" title="function not covered" >function defineProperties(target, props) {</span> <span class="cstat-no" title="statement not covered" >for (var i = 0; i &lt; props.length; i++) { <span class="cstat-no" title="statement not covered" >var descriptor = props[i]; <span class="cstat-no" title="statement not covered" ></span>descriptor.enumerable = descriptor.enumerable || false; <span class="cstat-no" title="statement not covered" ></span>descriptor.configurable = true; <span class="cstat-no" title="statement not covered" ></span>if ("value" in descriptor) <span class="cstat-no" title="statement not covered" >descriptor.writable = true; <span class="cstat-no" title="statement not covered" ></span></span>Object.defineProperty(target, descriptor.key, descriptor); </span>} </span>} <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function (Constructor, protoProps, staticProps) {</span> <span class="cstat-no" title="statement not covered" >if (protoProps) <span class="cstat-no" title="statement not covered" >defineProperties(Constructor.prototype, protoProps); <span class="cstat-no" title="statement not covered" ></span></span>if (staticProps) <span class="cstat-no" title="statement not covered" >defineProperties(Constructor, staticProps); <span class="cstat-no" title="statement not covered" ></span></span>return Constructor; </span>}; </span>}();</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function _possibleConstructorReturn(self, call) {</span> <span class="cstat-no" title="statement not covered" >if (!self) { <span class="cstat-no" title="statement not covered" >throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); </span>} <span class="cstat-no" title="statement not covered" ></span>return call &amp;&amp; (typeof call === "object" || typeof call === "function") ? call : self; </span>}
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function _inherits(subClass, superClass) {</span> <span class="cstat-no" title="statement not covered" >if (typeof superClass !== "function" &amp;&amp; superClass !== null) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); </span>} <span class="cstat-no" title="statement not covered" ></span>subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); <span class="cstat-no" title="statement not covered" ></span>if (superClass) <span class="cstat-no" title="statement not covered" >Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; </span></span>}
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function _classCallCheck(instance, Constructor) {</span> <span class="cstat-no" title="statement not covered" >if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} </span>}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var Functor = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="fstat-no" title="function not covered" >        function Functor(val) {</span>
+<span class="cstat-no" title="statement not covered" >            _classCallCheck(this, Functor);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.val = val;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        _createClass(Functor, [{</span>
+            key: 'map',
+            value: <span class="fstat-no" title="function not covered" >function map(f) {</span>
+<span class="cstat-no" title="statement not covered" >                return Functor.of(f(this.val));</span>
+            }
+        }]);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return Functor;</span>
+    }();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    Functor.of = <span class="fstat-no" title="function not covered" >function (val) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return new Functor(val);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var PraiseButton = <span class="fstat-no" title="function not covered" >function () {</span></span>
+        /**
+         * 
+         * @param {string or selector} el 初始化的元素
+         * @param {object} options {
+         *  showel: 显示数字的元素
+         *  buttonEl: 按钮元素
+         *  initCount: 初始化点赞数，如果为0，以showEl的html为准
+         *  step: 每次点击加几次
+         * } 
+         */
+<span class="fstat-no" title="function not covered" >        function PraiseButton(el) {</span>
+<span class="cstat-no" title="statement not covered" >            var _ref = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {},</span>
+                _ref$showEl = _ref.showEl,
+                showEl = _ref$showEl === undefined ? '.praise-show' : _ref$showEl,
+                _ref$buttonEl = _ref.buttonEl,
+                buttonEl = _ref$buttonEl === undefined ? '.praise-btn' : _ref$buttonEl,
+                _ref$initCount = _ref.initCount,
+                initCount = _ref$initCount === undefined ? 0 : _ref$initCount,
+                _ref$step = _ref.step,
+                step = _ref$step === undefined ? 1 : _ref$step;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _classCallCheck(this, PraiseButton);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            Functor.of(this).map(this.checkContainer(el)).map(this.checkShowEl(showEl)).map(this.checkButton(buttonEl)).map(this.checkCount(initCount));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.step = step;</span>
+<span class="cstat-no" title="statement not covered" >            this.bindEvent();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        _createClass(PraiseButton, [{</span>
+            key: 'bindEvent',
+            value: <span class="fstat-no" title="function not covered" >function bindEvent() {</span>
+<span class="cstat-no" title="statement not covered" >                var btn = this.btn,</span>
+                    self = this;
+<span class="cstat-no" title="statement not covered" >                btn.addEventListener('click', <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    self.praise(e);</span>
+<span class="cstat-no" title="statement not covered" >                    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                });
+            }
+        }, {
+            key: 'praise',
+            value: <span class="fstat-no" title="function not covered" >function praise(e) {</span>
+<span class="cstat-no" title="statement not covered" >                var showEl = this.showEl;</span>
+<span class="cstat-no" title="statement not covered" >                this.count += this.step;</span>
+<span class="cstat-no" title="statement not covered" >                showEl.innerHTML = this.count;</span>
+            }
+        }, {
+            key: 'checkContainer',
+            value: <span class="fstat-no" title="function not covered" >function checkContainer(el) {</span>
+<span class="cstat-no" title="statement not covered" >                return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (!el) {</span>
+<span class="cstat-no" title="statement not covered" >                        throw Error('没有初始元素选择器');</span>
+<span class="cstat-no" title="statement not covered" >                        return;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    scope.container = typeof el == 'string' ? document.querySelector(el) : el;</span>
+<span class="cstat-no" title="statement not covered" >                    return scope;</span>
+                };
+            }
+        }, {
+            key: 'checkButton',
+            value: <span class="fstat-no" title="function not covered" >function checkButton(btnEl) {</span>
+<span class="cstat-no" title="statement not covered" >                return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.btn = PraiseButton.checkEl(scope.container, btnEl, 'parise-btn', <span class="fstat-no" title="function not covered" >function (el) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        el.innerHTML = "点赞";</span>
+                    });
+<span class="cstat-no" title="statement not covered" >                    return scope;</span>
+                };
+            }
+        }, {
+            key: 'checkShowEl',
+            value: <span class="fstat-no" title="function not covered" >function checkShowEl(showEl) {</span>
+<span class="cstat-no" title="statement not covered" >                return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.showEl = PraiseButton.checkEl(scope.container, showEl, 'parise-show');</span>
+<span class="cstat-no" title="statement not covered" >                    return scope;</span>
+                };
+            }
+        }, {
+            key: 'checkCount',
+            value: <span class="fstat-no" title="function not covered" >function checkCount(initCount) {</span>
+<span class="cstat-no" title="statement not covered" >                var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return <span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var count = initCount || Number.parseInt(scope.showEl.innerHTML || 0, 10);</span>
+<span class="cstat-no" title="statement not covered" >                    _this.count = count;</span>
+<span class="cstat-no" title="statement not covered" >                    scope.showEl.innerHTML = count;</span>
+<span class="cstat-no" title="statement not covered" >                    return scope;</span>
+                };
+            }
+        }], [{
+            key: 'checkEl',
+            value: <span class="fstat-no" title="function not covered" >function checkEl(parent, selector, className, beforeCreateCb) {</span>
+<span class="cstat-no" title="statement not covered" >                if (selector instanceof Element) <span class="cstat-no" title="statement not covered" >return selector;</span></span>
+<span class="cstat-no" title="statement not covered" >                var el = void 0;</span>
+<span class="cstat-no" title="statement not covered" >                if (typeof selector == 'string') {</span>
+<span class="cstat-no" title="statement not covered" >                    el = parent.querySelector(selector);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (!el) {</span>
+<span class="cstat-no" title="statement not covered" >                    el = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >                    el.className = className;</span>
+<span class="cstat-no" title="statement not covered" >                    beforeCreateCb &amp;&amp; beforeCreateCb(el);</span>
+<span class="cstat-no" title="statement not covered" >                    parent.appendChild(el);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return el;</span>
+            }
+        }]);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return PraiseButton;</span>
+    }();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var Thumb = <span class="fstat-no" title="function not covered" >function (_PraiseButton) {</span></span>
+<span class="cstat-no" title="statement not covered" >        _inherits(Thumb, _PraiseButton);</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function Thumb(el) {</span>
+<span class="cstat-no" title="statement not covered" >            var options = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _classCallCheck(this, Thumb);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var _this2 = _possibleConstructorReturn(this, (Thumb.__proto__ || Object.getPrototypeOf(Thumb)).call(this, el, options));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var clsName = _this2.container.className;</span>
+<span class="cstat-no" title="statement not covered" >            if (clsName.indexOf('praise-thumb') === -1) {</span>
+<span class="cstat-no" title="statement not covered" >                _this2.container.clsName = clsName.split(' ').push('praise-thumb').join(' ');</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var titleWrapper = document.createElement('div');</span>
+<span class="cstat-no" title="statement not covered" >            titleWrapper.className = 'praise-title';</span>
+<span class="cstat-no" title="statement not covered" >            titleWrapper.innerHTML = '&lt;span class="praise-title__label"&gt;点赞数：&lt;/span&gt;';</span>
+<span class="cstat-no" title="statement not covered" >            titleWrapper.appendChild(_this2.showEl);</span>
+<span class="cstat-no" title="statement not covered" >            _this2.container.appendChild(titleWrapper);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this2.btn.className += ' thumb';</span>
+<span class="cstat-no" title="statement not covered" >            _this2.btn.innerHTML = '&lt;div class="thumb-connect"&gt;&lt;/div&gt;\n            &lt;div class="thumb-thumb"&gt;&lt;/div&gt;\n            &lt;div class="thumb-finger-first"&gt;&lt;/div&gt;\n            &lt;div class="thumb-fingter-sec"&gt;&lt;/div&gt;\n            &lt;div class="thumb-wrist"&gt;&lt;/div&gt;';</span>
+<span class="cstat-no" title="statement not covered" >            return _this2;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        _createClass(Thumb, [{</span>
+            key: 'praise',
+            value: <span class="fstat-no" title="function not covered" >function praise(e) {</span>
+<span class="cstat-no" title="statement not covered" >                var target = e.target;</span>
+<span class="cstat-no" title="statement not covered" >                _get(Thumb.prototype.__proto__ || Object.getPrototypeOf(Thumb.prototype), 'praise', this).call(this);</span>
+            }
+        }]);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return Thumb;</span>
+    }(PraiseButton);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (typeof define === 'function' &amp;&amp; define.amd) {</span>
+<span class="cstat-no" title="statement not covered" >        define('Thumb', [], <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >            return Thumb;</span>
+        })
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!noGlobal) {</span>
+<span class="cstat-no" title="statement not covered" >        window.Thumb = Thumb;</span>
+    }
+    
+&nbsp;
+}));</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Mar 31 2018 12:14:42 GMT+0800 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

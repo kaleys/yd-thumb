@@ -20,7 +20,7 @@ module.exports = function(config) {
     ],
 
 
-    // list of files / patterns to exclude
+    // list of files / patterns to excludekarma
     exclude: [
     ],
 

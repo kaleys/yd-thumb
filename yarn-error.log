@@ -1,17 +1,17 @@
 Arguments: 
-  /home/kaleys/.nvm/versions/node/v9.9.0/bin/node /home/kaleys/.nvm/versions/node/v9.9.0/bin/yarn add plantomjs-prebuilt -D
+  /Users/yinjialin/.nvm/versions/node/v8.10.0/bin/node /Users/yinjialin/.nvm/versions/node/v8.10.0/bin/yarn add webpack -D
 
 PATH: 
-  /home/kaleys/.nvm/versions/node/v9.9.0/bin:/home/kaleys/bin:/home/kaleys/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /Users/yinjialin/.nvm/versions/node/v8.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  9.9.0
+  8.10.0
 
 Platform: 
-  linux x64
+  darwin x64
 
 npm manifest: 
   {
@@ -36,7 +36,13 @@ npm manifest:
       "gulp-babel": "^7.0.1",
       "gulp-livereload": "^3.8.1",
       "gulp-sass": "^3.1.0",
-      "karma": "^2.0.0"
+      "jasmine-core": "^3.1.0",
+      "karma": "^2.0.0",
+      "karma-chrome-launcher": "^2.2.0",
+      "karma-coverage": "^1.1.1",
+      "karma-jasmine": "^1.1.1",
+      "karma-phantomjs-launcher": "^1.0.4",
+      "phantomjs-prebuilt": "^2.1.16"
     }
   }
 
@@ -1373,6 +1379,14 @@ Lockfile:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   
+  concat-stream@1.6.0:
+    version "1.6.0"
+    resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
+    dependencies:
+      inherits "^2.0.3"
+      readable-stream "^2.2.2"
+      typedarray "^0.0.6"
+  
   concat-stream@^1.6.1:
     version "1.6.2"
     resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
@@ -1793,6 +1807,10 @@ Lockfile:
     dependencies:
       is-arrayish "^0.2.1"
   
+  es6-promise@^4.0.3:
+    version "4.2.4"
+    resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
+  
   escape-html@~1.0.3:
     version "1.0.3"
     resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -1932,6 +1950,15 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  extract-zip@^1.6.5:
+    version "1.6.6"
+    resolved "https://registry.yarnpkg.com/extract-zip/-/extract-zip-1.6.6.tgz#1290ede8d20d0872b429fd3f351ca128ec5ef85c"
+    dependencies:
+      concat-stream "1.6.0"
+      debug "2.6.9"
+      mkdirp "0.5.0"
+      yauzl "2.4.1"
+  
   extsprintf@1.3.0:
     version "1.3.0"
     resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -1965,6 +1992,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.7.3.tgz#cc4074c7f4a4dfd03af54dd65c354b135132ce11"
     dependencies:
       websocket-driver ">=0.3.6"
+  
+  fd-slicer@~1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.0.1.tgz#8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
+    dependencies:
+      pend "~1.2.0"
   
   file-uri-to-path@1:
     version "1.0.0"
@@ -2102,6 +2135,14 @@ Lockfile:
   from@~0:
     version "0.1.7"
     resolved "https://registry.yarnpkg.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
+  
+  fs-extra@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-1.0.0.tgz#cd3ce5f7e7cb6145883fcae3191e9877f8587950"
+    dependencies:
+      graceful-fs "^4.1.2"
+      jsonfile "^2.1.0"
+      klaw "^1.0.0"
   
   fs.realpath@^1.0.0:
     version "1.0.0"
@@ -2330,7 +2371,7 @@ Lockfile:
     dependencies:
       natives "^1.1.0"
   
-  graceful-fs@^4.1.2:
+  graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
     version "4.1.11"
     resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   
@@ -2545,6 +2586,13 @@ Lockfile:
     dependencies:
       inherits "^2.0.3"
       minimalistic-assert "^1.0.0"
+  
+  hasha@^2.2.0:
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/hasha/-/hasha-2.2.0.tgz#78d7cbfc1e6d66303fe79837365984517b2f6ee1"
+    dependencies:
+      is-stream "^1.0.1"
+      pinkie-promise "^2.0.0"
   
   hawk@3.1.3, hawk@~3.1.3:
     version "3.1.3"
@@ -2967,7 +3015,7 @@ Lockfile:
     dependencies:
       is-unc-path "^1.0.0"
   
-  is-stream@^1.1.0:
+  is-stream@^1.0.1, is-stream@^1.1.0:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   
@@ -3027,6 +3075,10 @@ Lockfile:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   
+  jasmine-core@^3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.1.0.tgz#a4785e135d5df65024dfc9224953df585bd2766c"
+  
   jquery@^3.3.1:
     version "3.3.1"
     resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
@@ -3079,6 +3131,12 @@ Lockfile:
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   
+  jsonfile@^2.1.0:
+    version "2.4.0"
+    resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
+    optionalDependencies:
+      graceful-fs "^4.1.6"
+  
   jsonify@~0.0.0:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
@@ -3099,6 +3157,17 @@ Lockfile:
       extsprintf "1.3.0"
       json-schema "0.2.3"
       verror "1.10.0"
+  
+  karma-jasmine@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.1.tgz#6fe840e75a11600c9d91e84b33c458e1c46a3529"
+  
+  karma-phantomjs-launcher@^1.0.4:
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/karma-phantomjs-launcher/-/karma-phantomjs-launcher-1.0.4.tgz#d23ca34801bda9863ad318e3bb4bd4062b13acd2"
+    dependencies:
+      lodash "^4.0.1"
+      phantomjs-prebuilt "^2.1.7"
   
   karma@^2.0.0:
     version "2.0.0"
@@ -3133,6 +3202,10 @@ Lockfile:
       tmp "0.0.33"
       useragent "^2.1.12"
   
+  kew@^0.7.0:
+    version "0.7.0"
+    resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
+  
   kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.1.0, kind-of@^3.2.0:
     version "3.2.2"
     resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -3152,6 +3225,12 @@ Lockfile:
   kind-of@^6.0.0, kind-of@^6.0.2:
     version "6.0.2"
     resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
+  
+  klaw@^1.0.0:
+    version "1.3.1"
+    resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
+    optionalDependencies:
+      graceful-fs "^4.1.9"
   
   labeled-stream-splicer@^2.0.0:
     version "2.0.1"
@@ -3349,7 +3428,7 @@ Lockfile:
       lodash._reinterpolate "^3.0.0"
       lodash.escape "^3.0.0"
   
-  lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.4, lodash@^4.5.0, lodash@~4.17.4:
+  lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.4, lodash@^4.5.0, lodash@~4.17.4:
     version "4.17.5"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
   
@@ -3596,6 +3675,12 @@ Lockfile:
     dependencies:
       for-in "^1.0.2"
       is-extendable "^1.0.1"
+  
+  mkdirp@0.5.0:
+    version "0.5.0"
+    resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
+    dependencies:
+      minimist "0.0.8"
   
   "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
     version "0.5.1"
@@ -4115,6 +4200,10 @@ Lockfile:
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
   
+  pend@~1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
+  
   performance-now@^0.2.0:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -4122,6 +4211,20 @@ Lockfile:
   performance-now@^2.1.0:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+  
+  phantomjs-prebuilt@^2.1.16, phantomjs-prebuilt@^2.1.7:
+    version "2.1.16"
+    resolved "https://registry.yarnpkg.com/phantomjs-prebuilt/-/phantomjs-prebuilt-2.1.16.tgz#efd212a4a3966d3647684ea8ba788549be2aefef"
+    dependencies:
+      es6-promise "^4.0.3"
+      extract-zip "^1.6.5"
+      fs-extra "^1.0.0"
+      hasha "^2.2.0"
+      kew "^0.7.0"
+      progress "^1.1.8"
+      request "^2.81.0"
+      request-progress "^2.0.1"
+      which "^1.2.10"
   
   pify@^2.0.0:
     version "2.3.0"
@@ -4189,6 +4292,10 @@ Lockfile:
   process@~0.11.0:
     version "0.11.10"
     resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+  
+  progress@^1.1.8:
+    version "1.1.8"
+    resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
   
   proxy-agent@~2.0.0:
     version "2.0.0"
@@ -4488,7 +4595,13 @@ Lockfile:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
   
-  request@2, request@^2.0.0, request@^2.74.0:
+  request-progress@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/request-progress/-/request-progress-2.0.1.tgz#5d36bb57961c673aa5b788dbc8141fdf23b44e08"
+    dependencies:
+      throttleit "^1.0.0"
+  
+  request@2, request@^2.0.0, request@^2.74.0, request@^2.81.0:
     version "2.85.0"
     resolved "https://registry.yarnpkg.com/request/-/request-2.85.0.tgz#5a03615a47c61420b3eb99b7dba204f83603e1fa"
     dependencies:
@@ -5147,6 +5260,10 @@ Lockfile:
       fstream "^1.0.2"
       inherits "2"
   
+  throttleit@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
+  
   through2@^0.6.1:
     version "0.6.5"
     resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
@@ -5466,7 +5583,7 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
   
-  which@1, which@^1.2.14, which@^1.2.9:
+  which@1, which@^1.2.10, which@^1.2.14, which@^1.2.9:
     version "1.3.0"
     resolved "https://registry.yarnpkg.com/which/-/which-1.3.0.tgz#ff04bdfc010ee547d780bec38e1ac1c2777d253a"
     dependencies:
@@ -5549,16 +5666,39 @@ Lockfile:
       y18n "^3.2.1"
       yargs-parser "^5.0.0"
   
+  yauzl@2.4.1:
+    version "2.4.1"
+    resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.4.1.tgz#9528f442dab1b2284e58b4379bb194e22e0c4005"
+    dependencies:
+      fd-slicer "~1.0.1"
+  
   yeast@0.1.2:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: Couldn't find package "plantomjs-prebuilt" on the "npm" registry.
-      at new MessageError (/home/kaleys/.nvm/versions/node/v9.9.0/lib/node_modules/yarn/lib/cli.js:186:110)
-      at NpmResolver.<anonymous> (/home/kaleys/.nvm/versions/node/v9.9.0/lib/node_modules/yarn/lib/cli.js:51625:15)
-      at Generator.next (<anonymous>)
-      at step (/home/kaleys/.nvm/versions/node/v9.9.0/lib/node_modules/yarn/lib/cli.js:98:30)
-      at /home/kaleys/.nvm/versions/node/v9.9.0/lib/node_modules/yarn/lib/cli.js:109:13
-      at <anonymous>
-      at process._tickCallback (internal/process/next_tick.js:118:7)
+  Error: /Users/yinjialin/Documents/practice/thumb/node_modules/phantomjs-prebuilt: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node install.js
+  Directory: /Users/yinjialin/Documents/practice/thumb/node_modules/phantomjs-prebuilt
+  Output:
+  PhantomJS not found on PATH
+  Downloading https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-macosx.zip
+  Saving to /var/folders/mz/ymmxv6717n1dx35mly_q3wfr0000gn/T/phantomjs/phantomjs-2.1.1-macosx.zip
+  Receiving...
+  
+  Error making request.
+  Error: connect ETIMEDOUT 52.216.64.224:443
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+  
+  Please report this full log at https://github.com/Medium/phantomjs
+      at ProcessTermError.MessageError (/Users/yinjialin/.nvm/versions/node/v8.10.0/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/yinjialin/.nvm/versions/node/v8.10.0/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/yinjialin/.nvm/versions/node/v8.10.0/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
