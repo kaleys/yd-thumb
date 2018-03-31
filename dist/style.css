@@ -124,6 +124,7 @@ textarea {
             transform-origin: left bottom; }
 
 .praise-thumb {
+<<<<<<< HEAD:dist/style.css
   width: 285px;
   margin: 0 auto;
   text-align: center; }
@@ -141,6 +142,19 @@ textarea {
 .parise-show__change {
   -webkit-animation: changeFontSize .5s;
           animation: changeFontSize .5s; }
+=======
+  width: 400px;
+  margin: 0 auto;
+  text-align: center; }
+  .praise-thumb .praise-title {
+    padding: 10px; }
+  .praise-thumb .praise-btn {
+    cursor: pointer; }
+
+.praise-show__change {
+  -webkit-animation: changeFontSize .2;
+          animation: changeFontSize .2; }
+>>>>>>> 52dc2fbecd81d9a04eb307d8da2ca88ce8b2cdb6:dist/thumb.css
 
 @-webkit-keyframes changeFontSize {
   from,
