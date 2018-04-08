@@ -9,6 +9,7 @@ class Functor {
 Functor.of = (val) => new Functor(val);
 
 
+
 export default class PraiseButton {
   /**
    * 
@@ -24,7 +25,8 @@ export default class PraiseButton {
     showEl = '.praise-show',
     buttonEl = '.praise-btn',
     initCount = 0,
-    step = 1
+    step = 1,
+    click= null
   } = {}) {
     Functor.of(this)
       .map(this.checkContainer(el))
@@ -33,17 +35,18 @@ export default class PraiseButton {
       .map(this.checkCount(initCount));
 
     this.step = step;
+    this.click = click;
     this.bindEvent();
   }
 
   bindEvent() {
     let btn = this.btn,
-      self = this;
-    btn.addEventListener('click', function (e) {
-      self.praise(e);
-      e.preventDefault();
-      return false;
-    })
+      fn = this.click || function(e){
+        // console.log('============')
+        this.praise(e);
+        e.preventDefault();
+      }
+    btn.addEventListener('click', fn.bind(this));
   }
 
   praise(e) {

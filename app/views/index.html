@@ -1,0 +1,49 @@
+{% extends './layout.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/styles/style.css">
+{% endblock %}
+{% block content %}
+<div>
+  <div id="thumb"></div>
+<div>
+<script src="/scripts/bundle.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script>
+  //让函数间隔多少秒后再执行
+  function throttle(fn, delay=200) {
+    let timer = null, previous = 0;
+
+    return function (...args) {
+      let now = Date.now(), context = this;
+      let remaining = delay - (now - previous);
+      // 如果已经超过设定的时间，就直接调用
+      // 如果下一次的调用的间隔在设定时间内，而且timer还未设置，那么就设置一个
+      if (remaining <= 0) {
+        clearTimeout(timer);
+        timer = null;
+        fn.apply(context, args);
+        previous = now;
+      } else if (!timer) {
+        timer = setTimeout(() => {
+          fn.apply(context, args);
+          timer = null;
+        }, remaining);
+      }
+    }
+  }
+
+  new kaleys.Thumb('#thumb', {
+    initCount: {{count}},
+    click: throttle(function(e){
+      let self = this;
+      axios.post('/index/index')
+        .then((res)=>{
+          self.praise();
+        })
+    })
+  });
+
+  
+</script>
+{% endblock %}

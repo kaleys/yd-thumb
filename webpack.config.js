@@ -6,15 +6,15 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: './src/thumb.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'app/public'),
+    filename: 'scripts/bundle.js',
     libraryTarget: 'umd',
     library:'kaleys'
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.mjs$/,
         use: [
           {
             loader: 'babel-loader',
@@ -36,7 +36,7 @@ module.exports = {
     ]
   },
 
-  devtool: 'inline-source-map',
+  //devtool: 'inline-source-map',
   plugins: [
     // new CleanWebpackPlugin(['dist']),
     // new ExtractTextPlugin('style.css'), //报错

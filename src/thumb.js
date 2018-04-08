@@ -8,6 +8,8 @@ const once = function(el, eventName, callback) {
   }
   el.addEventListener(eventName, fn);
 }
+
+
 export class Thumb extends PariseButton {
   constructor(el, options = {}) {
     super(el, options);
@@ -34,20 +36,20 @@ export class Thumb extends PariseButton {
   }
 
   praise(e) {
-    if (this.animating) return;
+    // if (this.animating) return;
     super.praise();
     this.startAnimate();
   }
 
   startAnimate(){
     once(this.showEl, 'animationend', this.completeAnimate.bind(this));
-    this.animating = true;
+    // this.animating = true;
     this.showEl.className += ' parise-show__change';
   }
   completeAnimate() {
     let cls = this.showEl.className.replace(' parise-show__change', '');
     this.showEl.className = cls;
-    this.animating = false;
+    // this.animating = false;
   }
 
 }
